@@ -48,19 +48,19 @@ exports.config = {
     //
     capabilities: [{
         browserName: 'chrome',
-        version: '45.0',
-        platform: 'Windows XP',
-        name: 'JavaScript Zagreb',
-        tunnelIdentifier: process.env.TRAVIS_JOB_NUMBER,
-        build: process.env.TRAVIS_BUILD_NUMBER
-    }, {
-        browserName: 'internet explorer',
+        // version: '45.0',
+        // platform: 'Windows XP',
+        // name: 'JavaScript Zagreb',
+        // tunnelIdentifier: process.env.TRAVIS_JOB_NUMBER,
+        // build: process.env.TRAVIS_BUILD_NUMBER
+    }, /*{
+        browserName: 'firefox',
         version: '9.0',
         platform: 'Windows 7',
         name: 'JavaScript Zagreb',
         tunnelIdentifier: process.env.TRAVIS_JOB_NUMBER,
         build: process.env.TRAVIS_BUILD_NUMBER
-    }],
+    }*/],
     //
     // ===================
     // Test Configurations

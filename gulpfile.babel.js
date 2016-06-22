@@ -13,10 +13,22 @@ gulp.task('serve', (done) => {
 });
 
 gulp.task('selenium', (done) => {
-  selenium.start((err, child) => {
+  selenium.install({
+    logger: (message) => {}
+  }, err => {
     if (err) return done(err);
-    seleniumServer = child;
-    done();
+
+    if (process.env.TRAVIS) {
+      child.stderr.on('data', function(data){
+        console.log(data.toString());
+      });
+    }
+
+    selenium.start((err, child) => {
+      if (err) return done(err);
+      seleniumServer = child;
+      done();
+    })
   });
 });
 
